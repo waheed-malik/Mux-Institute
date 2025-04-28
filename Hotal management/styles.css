@@ -1,0 +1,108 @@
+/* Reuse the same styles from the previous page for consistency */
+
+/* Services Section */
+a {
+
+    text-decoration: none;
+
+}
+
+ul {
+    list-style: none;
+
+}
+
+.services {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Layout for Service Cards */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

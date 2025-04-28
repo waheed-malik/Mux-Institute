@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Arrays</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: darkorange;
+            font-size: x-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: rgb(112, 112, 211);
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo1.png" alt="">
+    <h1>JavaScript Arrays</h1>
+    <h2>Create a array in one line</h2>
+    <p id="demo"></p>
+    <script>
+        const cars = ["Saab", "Volve", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+    <hr>
+    <h2>Create a array in multiple lines</h2>
+    <p id="demo1"></p>
+    <script>
+        const car = [
+            "Saab",
+            "Volvo",
+            "BMW"
+        ];
+        document.getElementById("demo1").innerHTML = car;
+    </script>
+    <hr>
+    <h2>Bracket Indexing</h2>
+    <p>JavaScript array elements are accessed using numeric indexes(starting from 0)"Saab", "Volvo", "BMW".</p>
+    <p id="demo2"></p>
+    <script>
+        const car1 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo2").innerHTML = car1[0];
+    </script>
+    <hr>
+    <p>Array elements are accessed using their index number:</p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo3").innerHTML = fruits;
+        fruits[0] = "Kiwi";
+        document.getElementById("demo4").innerHTML = fruits;
+    </script>
+    <hr>
+    <h2>The length Property</h2>
+    <p>The length property returns the length of an array:</p>
+    <p id="demo5"></p>
+    <script>
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        let size = fruit.length;
+        document.getElementById("demo5").innerHTML = size;
+    </script>
+    <hr>
+    <h2>Looping an Array</h2>
+    <p id="demo6"></p>
+    <script>
+        const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruit1.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruit1[i] + "</li>"
+        }
+        text += "</ul>";
+        document.getElementById("demo6").innerHTML = text;
+    </script>
+    <hr>
+    <p>The length property provides an easy way to append new elemens to an array wthout using the pish() method.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo7"></p>
+    <script>
+        const fruit2 = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruit2;
+
+        function myFunction() {
+            fruit2[fruit2.length] = "Lemon";
+            document.getElementById("demo7").innerHTML = fruit2;
+        }
+    </script>
+    <hr>
+    <p>adding elemnts with high indexes can create undefined "holes" in an array.</p>
+    <p id="demo8"></p>
+    <script>
+        const frt = ["Banana", "Orange", "Apple"];
+        frt[6] = "Lemon";
+        let fLeng = frt.length;
+        let text1 = "";
+        for (i = 0; i < fLeng; i++) {
+            text1 += frt[i] + "<br>";
+        }
+        document.getElementById("demo8").innerHTML = text1;
+    </script>
+    <hr>
+    <h2>The instanceof Operator</h2>
+    <p>The instancef operator returs true when used on an array:</p>
+    <p id="demo9"></p>
+    <script>
+        var fruitM = ["Banana", "Orange", " Apple"];
+        document.getElementById("demo9").innerHTML = fruitM instanceof Array;
+    </script>
+
+</body>
+
+</html>

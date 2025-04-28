@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-image</title>
+    <style>
+        /* #borderimg {
+            border: 10px solid transparent;
+            padding: 30px;
+            border-image: url(bc.jpg) 30 round;
+
+        } */
+
+        #borderimg {
+            border: 10px solid transparent;
+            padding: 75px;
+            border-image: url(flower.png) 70 stretch;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+        #borderimg1 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(flower.png) 50 round;
+        }
+
+        #borderimg2 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(flower.png) 20% round;
+        }
+
+        #borderimg3 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(flower.png) 30% round;
+        }
+
+        #borderimg4 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(flower.png);
+            border-image-slice: 20;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p id="borderimg">Border-image:url(bc.jpg) 30 round;</p> -->
+    <p id="borderimg">Border-image:url(flo.png) 30 round;</p>
+    <!-- <img src="bc.jpg"> -->
+    <img src="flower.png">
+    <p><strong>Note: </strong></p>
+    <br>
+    <h1>The boder-image propert</h1>
+    <p id="borderimg1">border-image: url(flower.png) 50 round</p>
+    <p id="borderimg2">border-image: url(flower.png) 20% round</p>
+    <p id="borderimg3">border-image: url(flower.png) 30% round</p>
+    <p id="borderimg4">border-image: url(flower.png) </p>
+</body>
+
+</html>

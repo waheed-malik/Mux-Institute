@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Sort</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: cyan;
+            font-size: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JavaScript Array Sort</h1>
+    <h2>The sort() Method</h2>
+    <p>The sort() method sorts an array alphabetically:</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits;
+
+        fruits.sort();
+        document.getElementById("demo2").innerHTML = fruits;
+    </script>
+    <hr>
+    <h2>Sort in Reverse</h2>
+    <p>The reverse() method reverses the elemnts in an array.</p>
+    <p>By combining sort() and reverse() you can sort an array in desceding order:</p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        const fruit = ["Banana", "Grapes", "Orage", "Apple", "Mango"];
+        document.getElementById("demo3").innerHTML = fruit;
+        fruit.sort();
+        document.getElementById("demo4").innerHTML = fruit;
+        fruit.reverse();
+        document.getElementById("demo5").innerHTML = fruit;
+    </script>
+    <hr>
+    <p>Sort a array in ascending order:</p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        const points = [40, 100, 1, 5, 23, 10, 29];
+        document.getElementById("demo6").innerHTML = points;
+        points.sort(function (a, b) {
+            return a - b
+        });
+        document.getElementById("demo7").innerHTML = points;
+    </script>
+    <hr>
+    <p>Sort an array in descending order</p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        const point = [40, 100, 1, 5, 23, 10, 29];
+        document.getElementById("demo8").innerHTML = point;
+        point.sort(function (a, b) {
+            return b - a
+        });
+        document.getElementById("demo9").innerHTML = point;
+    </script>
+    <hr>
+    <p>Click the buttons to sort the array alphabetcally or numerically.</p>
+    <button onclick="myFunction1()">Sort Alphabetically</button>
+    <button onclick="myFunction2()">Sort Numerically</button>
+    <p id="demo10"></p>
+    <script>
+        const num = [40, 100, 10, 23, 45, 67, 2, 1, 89];
+        document.getElementById("demo10").innerHTML = num;
+
+        function myFunction1() {
+            num.sort();
+            document.getElementById("demo10").innerHTML = num;
+        }
+        function myFunction2() {
+            num.sort(function (a, b) {
+                return a - b
+            });
+            document.getElementById("demo10").innerHTML = num;
+        }
+    </script>
+    <hr>
+    <p>Click the button (again and again) to sort the array in random order.</p>
+    <button onclick="myFunction()">Try it!</button>
+    <p id="demo11"></p>
+    <script>
+        const random = [40, 20, 30, 40, 50, 60, 70, 100, 1000, 10, 100000];
+        document.getElementById("demo11").innerHTML = random;
+
+        function myFunction() {
+            random.sort(function () {
+                return 0.5 - Math.random()
+            });
+            document.getElementById("demo11").innerHTML = random;
+        }
+    </script>
+    <hr>
+
+    <p>The Lowest number is <span id="demo12"></span>.</p>
+    <script>
+        const low = [12, 40, 21, 34, 2];
+        low.sort(function (a, b) {
+            return a - b
+        });
+        document.getElementById("demo12").innerHTML = low[0];
+    </script>
+    <hr>
+    <h2> Using Math.min()</h2>
+    <p>The lowest number is <span id="demo13"></span>.</p>
+    <script>
+        const lowt = [40, 10, 100, 1, 5, 25, 10];
+        document.getElementById("demo13").innerHTML = myArrayMin(lowt);
+        function myArrayMin(arr) {
+            return Math.min.apply(null, arr);
+        }
+    </script>
+    <hr>
+    <h2>Using Math.max()</h2>
+    <p>The highest number is <span id="demo14"></span>.</p>
+    <script>
+        const hig = [40, 10, 100, 1, 5, 25, 10];
+        document.getElementById("demo14").innerHTML = myArrayMax(hig);
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+    </script>
+    <hr>
+    <h2>using Homemade </h2>
+    <p>The lowest number is <span id="demo15"></span>.</p>
+    <script>
+        const lost = [40, 100, 1, 4, 5, 25, 10];
+        document.getElementById("demo15").innerHTML = myArrayMin(lost);
+        function myArrayMin(arr) {
+            let len = arr.length;
+            let min = Infinity;
+            while (len--) {
+                if (arr[len] < min) {
+                    min = arr[len];
+                }
+            }
+            return min;
+        }
+    </script>
+</body>
+
+</html>

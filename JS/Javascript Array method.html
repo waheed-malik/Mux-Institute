@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Arrays Method</h1>
+    <h2>The length property</h2>
+    <p id="demo"></p>
+    <script>
+        const friuts = ["Banana", "Orange", "Apple", "Mango", "Grapes"];
+        let size = friuts.length;
+        document.getElementById("demo").innerHTML = size;
+    </script>
+    <hr>
+    <h2>The toString() method returns an array as a comma separated string:</h2>
+    <p id="demo1"></p>
+    <script>
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruit.toString();
+    </script>
+    <hr>
+    <h2>The at()method</h2>
+    <p>The at() method returns an indexed element from an array:</p>
+    <p id="demo2"></p>
+    <script>
+        const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit2 = fruit1.at(2);
+        document.getElementById("demo2").innerHTML = fruit2;
+    </script>
+    <hr>
+    <h2>The join() Method</h2>
+    <p>The join() metho join array elements into a string.</p>
+    <p>It this example we have used " * " as a separate between the elements: </p>
+    <p id="demo3"></p>
+    <script>
+        const frt = ["Mango", "Banana", "Apple", "Orange"];
+        document.getElementById("demo3").innerHTML = frt.join(" * ");
+    </script>
+    <hr>
+    <h2>The pop() Method</h2>
+    <p>The pop() method removes the last element from an array.</p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        const frit = ["Mango", "Banana", "Apple", "Orange"];
+        document.getElementById("demo4").innerHTML = frit;
+        frit.pop();
+        document.getElementById("demo5").innerHTML = frit;
+    </script>
+    <hr>
+
+    <h2>The pop() Method</h2>
+    <p>The pop() method returns the value that was "popped out":</p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        const frit1 = ["Mango", "Banana", "Apple", "Orange"];
+        document.getElementById("demo6").innerHTML = frit1.pop();
+        document.getElementById("demo7").innerHTML = frit1;
+    </script>
+    <hr>
+    <h2>The push() Method</h2>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        const friut4 = ["Mango", "Orange", "Apple", "Grapes"];
+        document.getElementById("demo8").innerHTML = friut4;
+        fruit4.push("Kiwi");
+        document.getElementById("demo9").innerHTML = friut4;
+    </script>
+    <hr>
+    <p>The push() method returns the new array length:</p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <script>
+        const friut5 = ["Mango", "Banana", "Apple", "Grapes"];
+        document.getElementById("demo10").innerHTML = friut5.push("Kiwi");
+        document.getElementById("demo11").innerHTML = friut5;
+
+    </script>
+    <hr>
+    <h2>The shift() Method</h2>
+
+    <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <script>
+        const friuts1 = ["Banana", "Orange", "Mango", "Graphes"];
+        document.getElementById("demo12").innerHTML = friuts1;
+        friuts1.shift();
+        document.getElementById("demo13").innerHTML = friuts1;
+    </script>
+    <hr>
+    <p>The shift() method returns the element that was shifted out.</p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <script>
+        const friut6 = ["Banana", "orange", "Apple", "Mango", "Kiwi"];
+        document.getElementById("demo14").innerHTML = friut6.shift();
+        document.getElementById("demo15").innerHTML = fruit6;
+    </script>
+    <hr>
+    <h2>The unshift() Method</h2>
+    <p>The unshift() method adds new elements to the beginning of an array:</p>
+    <p id="demo16"></p>
+    <p id="demoo"></p>
+    <script>
+        const friut7 = ["Banana", "Orange", " Apple", "Mango"];
+        document.getElementById("demo16").innerHTML = friut7;
+        fruits.unshift("Lemon");
+        document.getElementById("demoo").innerHTML = friut7;
+    </script>
+
+    <hr>
+    <h2>Bracket Indexing</h2>
+    <p>Array elements are accessed using their index number:</p>
+    <p id="ind1"></p>
+    <p id="ind2"></p>
+    <script>
+        const friutt = ["Mango", "Orange", "Apple", "Banana"];
+        document.getElementById("ind1").innerHTML = friutt;
+        friutt[0] = "Kiwi";
+        document.getElementById("ind2").innerHTML = friutt;
+    </script>
+    <hr>
+    <p>The unshift() method returns the length of the new array:</p>
+    <p id="ind3"></p>
+    <p id="ind4"></p>
+    <script>
+        const fruittt = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("ind3").innerHTML = fruittt.unshift("lemon");
+        document.getElementById("ind4").innerHTML = fruittt;
+    </script>
+
+</body>
+
+</html>

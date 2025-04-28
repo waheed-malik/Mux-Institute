@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(pic.jpg);
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            /* color: rgb(135, 224, 2); */
+        }
+
+        h2 {
+            color: deepskyblue;
+        }
+
+        p {
+            background-color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <input type="button" value="String" onclick="document.getElementById('demo').innerHTML= 'hello malik' ">
+    <hr>
+    <br>
+    <p id="demo1"></p>
+    <button type="button" onclick="document.getElementById('demo1').innerHTML= 10+200">Operator</button>
+    <hr>
+    <p id="demo3">Js can change the style of an HTML</p>
+    <button type="button" onclick="document.getElementById('demo3').style.fontSize='40px'">style</button>
+    <hr>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = "Js Practice";
+    </script>
+
+    <script>
+        document.write(5 + 6);
+    </script>
+    <hr>
+
+    <h2>JavaScript Statements</h2>
+    <p id="semo"></p>
+    <script>
+        document.getElementById("semo").innerHTML = "Hello World";
+    </script>
+    <hr>
+    <p id="semo1"></p>
+    <script>
+        let x, y, z;
+        x = 5;
+        y = 6;
+        z = x + y;
+        document.getElementById("semo1").innerHTML = "The value of z is " + z + ".";
+    </script>
+    <hr>
+    <p>Javscript code blocks are written between { and }</p>
+    <button type="button" onclick="myFunction()">Click me!</button>
+
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo5").innerHTML = "Hi Malik";
+            document.getElementById("demo6").innerHTML = "Hi Malik";
+
+        }
+    </script>
+    <hr>
+    <h2>JavaScript Variables</h2>
+    <p id="demo7"></p>
+    <script>
+        var a = 5;
+        var b = 99;
+        var c = a + b;
+        document.getElementById("demo7").innerHTML = "The Value of c is " + c + ".";
+    </script>
+    <hr>
+    <p id="demo8"></p>
+    <script>
+        let n, m, j;
+        n = 5;
+        m = 104;
+        j = n + m;
+        document.getElementById("demo8").innerHTML = j;
+
+    </script>
+    <hr>
+    <p>In This example , price1, price2, and total are variables.</p>
+    <p id="demo9"></p>
+    <script>
+        const price1 = 5;
+        const price2 = 17;
+        let total = price1 + price2;
+        document.getElementById("demo9").innerHTML = "The Total is:" + total;
+    </script>
+    <br><br>
+    <hr>
+    <p>String are written with Quotes.</p>
+    <p>Numbers Are Written without Quotes.</p>
+    <p id="demo10"></p>
+    <script>
+        const pi = 3.14;
+        let person = "Waheed Malik";
+        let answer = 'Yes I am!';
+        document.getElementById("demo10").innerHTML = pi + "<br>" + person + "<br>" + answer;
+    </script>
+    <hr>
+    <br><br>
+    <p>Create a variables , assign a value to it, and display it:</p>
+    <p id="demo11"></p>
+    <script>
+        let carName = "Volvo";
+        document.getElementById("demo11").innerHTML = carName;
+    </script>
+    <hr>
+    <br><br>
+    <p>You can declare Many Variables in one statement.</p>
+    <p id="demo12"></p>
+    <script>
+        let man = "Waheed Malik",
+            carNo = "MarCD",
+            price = 50009999;
+        document.getElementById("demo12").innerHTML = man + "<br>" + carNo + "<br>" + price;
+    </script>
+    <hr>
+    <br><br>
+    <p>The Result of Adding 5+10+50 is:</p>
+    <p id="demo13"></p>
+    <script>
+        let M = 5 + 10 + 50;
+        document.getElementById("demo13").innerHTML = M;
+    </script>
+</body>
+
+</html>

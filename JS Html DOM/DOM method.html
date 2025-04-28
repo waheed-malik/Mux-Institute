@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1 {
+            color: black;
+            text-decoration: double underline;
+        }
+
+        h2 {
+            color: cyan;
+            text-decoration: underline;
+        }
+
+        h3 {
+            color: rgb(0, 255, 89);
+        }
+
+        p {
+            color: rgb(156, 0, 125);
+        }
+
+        input {
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+
+        #frm1 {
+            background-color: aqua;
+            opacity: 0.5;
+            width: 30%;
+            height: 200px;
+            margin-left: 400px;
+            padding: 30px;
+            border: 2px solid black;
+            border-radius: 5px;
+
+        }
+
+        #frm1:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JS HTML DOM</h1>
+    <h2>DOM Method</h2>
+    <h3>My First Page</h3>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello World";
+    </script>
+    <hr>
+    <p id="intro">Finding HTML Element By Id</p>
+    <p>This example demonstrates the ,<b>getElementById</b> Method.</p>
+    <p id="demo1"></p>
+    <script>
+        const element = document.getElementById("intro");
+        document.getElementById("demo1").innerHTML = "The text from the intro paragrph is: " + element.innerHTML;
+    </script>
+    <hr>
+    <p>Finding HTML Element by Tag Name</p>
+    <p>This example demonstrates the <b>getElementByTagName</b> Method.</p>
+    <p id="demo3"></p>
+    <script>
+        const elements = document.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML = 'The text is first paragraph (index 4) is :' + elements[4].innerHTML;
+    </script>
+    <hr>
+    <div id="main">
+        <p>Finding HTML Elements By tag name</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div>
+    <p id="demo4"></p>
+    <script>
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo4").innerHTML = 'The first paragraph (index 0 ) inside "main" is:' + y[0].innerHTML; 
+    </script>
+    <hr>
+    <p>Finding HTML Elements by class Name.</p>
+    <p class="intro1">Hello World</p>
+    <p class="intro1">This example demonstrate the <b>getElementsByClassName</b> method.</p>
+    <p id="demo5"></p>
+    <script>
+        const a = document.getElementsByClassName("intro1");
+        document.getElementById("demo5").innerHTML = 'The first paragraph (index 0 ) with class = "intro1" is: ' + a[0].innerHTML;
+
+    </script>
+    <hr>
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="introo">Hi Malik</p>
+    <p class="introo">This example demonstrates the <b>QuerySlectorAll</b> method.</p>
+    <p id="demo6"></p>
+    <script>
+        const b = document.querySelectorAll("p.introo");
+        document.getElementById("demo6").innerHTML = 'The first paragraph (index 0) is: ' + b[0].innerHTML;
+    </script>
+    <hr>
+    <p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+    <form id="frm1">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+
+    <p id="demo7"></p>
+
+    <script>
+        const c = document.forms["frm1"];
+        let text = "";
+        for (let i = 0; i < c.length; i++) {
+            text += c.elements[i].value + "<br>";
+        }
+        document.getElementById("demo7").innerHTML = text;
+    </script>
+    <hr>
+    <h2>JavaScript can Change HTML</h2>
+
+    <p id="p1">Hello World!</p>
+
+    <script>
+        document.getElementById("p1").innerHTML = "New text!";
+    </script>
+
+    <p>The paragraph above was changed by a script.</p>
+    <hr>
+    <h1 id="id01">Old Heading</h1>
+
+    <script>
+        const element1 = document.getElementById("id01");
+        element1.innerHTML = "New Heading";
+    </script>
+
+    <p>JavaScript changed "Old Heading" to "New Heading".</p>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(black, rgb(238, 238, 38), blue);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1 {
+            color: greenyellow;
+        }
+
+        h2 {
+            color: lime;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>javaScript Numbers</h1>
+    <p>Numbers can be written with or without decimals:</p>
+    <p id="demo"></p>
+    <script>
+        let x = 3.14;
+        let y = 3;
+        document.getElementById("demo").innerHTML = x + "<br>" + y;
+    </script>
+    <hr>
+    <p>Extra large or extra small numbers can be written with scientific notation: </p>
+    <p>123e5</p>
+    <p>123e-5</p>
+    <p id="demo1"></p>
+
+    <script>
+        let a = 123e5;
+        let b = 123e-5;
+        document.getElementById("demo1").innerHTML = a + "<br>" + y;
+
+    </script>
+    <hr>
+    <h2>Integer Precision</h2>
+    <p>Integers are accurate up to 15 digits: 99999999999999, 99999999999999999 these converts</p>
+    <p id="demo3"></p>
+    <script>
+        let c = 999999999999999;
+        let d = 9999999999999999;
+        document.getElementById("demo3").innerHTML = c + "<br>" + d;
+    </script>
+    <hr>
+    <h2>Floating point Precision
+    </h2>
+    <p>Floating point arithmetic is not always 100% acurate.</p>
+    <p id="demo4"></p>
+    <script>
+        let e = 0.2 + 0.1;
+        document.getElementById("demo4").innerHTML = "0.2 + 0.1 =" + e;
+
+    </script>
+
+    <p>But it helps to multiply and divide:</p>
+    <p id="demo5"></p>
+    <script>
+        let f = (0.2 * 10 + 0.1 * 10);
+        document.getElementById("demo5").innerHTML = "0.2 + 0.1 =" + f;
+
+    </script>
+    <hr>
+    <p>You can use the global javaScript function is NaN() to find out if a value is not a number</p>
+    <p id="demo6"></p>
+    <script>
+        let g = 100 / "Apple";
+        document.getElementById("demo6").innerHTML = isNaN(x);
+    </script>
+    <hr>
+    <p>If you use NaN in a mathematical operation , the result will also be NaN:</p>
+    <p id="demo7"></p>
+    <script>
+        let h = NaN;
+        let i = 5;
+        document.getElementById("demo7").innerHTML = h + i;
+
+    </script>
+    <hr>
+    <p>The typeof NaN is Number:</p>
+    <p id="demo8"></p>
+    <script>
+        let k = NaN;
+        document.getElementById("demo8").innerHTML = typeof k;
+    </script>
+    <hr>
+    <p>Infinity is returned if you calculate a number outside the largest possible number:</p>
+    <p id="demo9"></p>
+    <script>
+        let myNumber = 2;
+        let txt = "";
+        while (myNumber != Infinity) {
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+        }
+        document.getElementById("demo9").innerHTML = txt;
+    </script>
+    <hr>
+    <p>Numeric constants, preceded by 0x, are interpreted as hexadecimal:</p>
+    <p id="demo10"></p>
+    <script>
+        let Const = 0xFF;
+        document.getElementById("demo10").innerHTML = "0xFF = " + Const;
+
+    </script>
+</body>
+
+</html>

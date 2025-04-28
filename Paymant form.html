@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            padding: 5px;
+            background-color: beige;
+        }
+
+        h1,
+        h2 {
+            font-size: xx-large;
+            text-align: center;
+            background-color: honeydew;
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px rgb(136, 252, 231);
+        }
+
+        form {
+            background-color: blanchedalmond;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 70%;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            font-size: x-large;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+
+        input[type="file"],
+        input[type="search"],
+        input[type="color"] {
+            padding: 5px;
+            margin: 5px 0 20px;
+        }
+
+        fieldset {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Payment Form</h1>
+    <h2>Contact Information</h2>
+    <form action="">
+        <!-- Name -->
+        <input type="text" name="fname" placeholder="abc"><br><br>
+        <label for="lname">Last Name:</label>
+        <label for="fname">First Name:</label>
+        <input type="text" name="lname" placeholder="abc"><br><br>
+
+        <!-- Gender -->
+        <fieldset>
+            <legend> Gender</legend>
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="male" value="male"><br>
+            <label for="female">female</label>
+            <input type="radio" name="gender" id="female" value="female">
+
+            <!-- Address -->
+        </fieldset><br>
+        <label for="address">Address:</label><br>
+        <textarea name="address" id="address" placeholder="Enter your address" cols="50" rows="10">
+        </textarea><br><br>
+        <!-- number -->
+        <label for="phone">Enter your phone number:</label>
+        <input type="phone" id="phone" name="phone" value="030********"><br><br>
+        <!--Email  -->
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="abcx@gmail.com"><br><br>
+
+        <!-- pincode -->
+        <label for="pincode">Pincode:</label>
+        <input type="number" name="pincode" id="pincode" placeholder="1234567"><br><br>
+
+        <h2>Additional Services</h2>
+        <!-- Additional Services -->
+        <label for="service1">Service 1</label>
+        <input type="checkbox" id="service1" name="services" value="service1"><br>
+        <label for="service2">Service 2</label>
+        <input type="checkbox" id="service2" name="services" value="service2"><br>
+        <label for="service3">Service 3</label>
+        <input type="checkbox" id="service3" name="services" value="service3"><br>
+        <label for="service4">Service 4</label>
+        <input type="checkbox" id="service4" name="services" value="service4"><br><br>
+        <h1>Payment information</h1>
+
+        <!-- Card Type -->
+        <label for="Card type">Card Type:</label>
+        <select name="card-type" id="card-type">
+            <option value="">---Select a Card Type---</option>
+            <option value="Visa">Visa</option>
+            <option value="Visa">MasterCard</option>
+            <option value="Visa">Upay</option>
+            <option value="Visa">Easypassa</option>
+        </select><br><br>
+
+        <!-- card Number -->
+        <label for="number">Card number:</label>
+        <input type="number" name="number" id="number"><br><br>
+
+        <!-- CVV -->
+        <label for="CVV">CVV:</label>
+        <input type="password" name="CVV" id="CVV" placeholder="123.."><br><br>
+
+        <!-- Date -->
+        <label for="expiration Date">Expiration Date:</label>
+        <input type="date" name="date" id="date" placeholder="mm/dd/yyyy"><br><br>
+        <!-- attach file -->
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+        <!-- search -->
+        <label for="gsearch">Search Google:</label>
+        <input type="search" id="gsearch" name="gsearch"><br><br>
+
+        <input type="submit" onclick="alert('payment successful')" value="Pay Now"><br><br>
+        <input type="reset" value="reset"><br><br>
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" name="favcolor" id="favcolor" value="#ff0000">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript HTML DOM</h1>
+    <p>Changing the HTML style:</p>
+
+    <p id="p1">Hello Mux</p>
+    <p id="p2">Yes world!</p>
+    <script>
+        document.getElementById("p2").style.color = "blue";
+        document.getElementById("p2").style.fontFamily = "Arial";
+        document.getElementById("p2").style.fontSize = "larger";
+    </script>
+    <hr>
+    <h1>This example changes the style of the HTML element with id="id1", when the user clicks a button:</h1>
+    <h1 id="id1">MY HEADING 1</h1>
+    <button type="button" onclick="document.getElementById('id1').style.color='red'">Click Me!</button>
+
+    <hr>
+    <h1>Hide text and visible text</h1>
+    <p id="h1">
+        This is text. This is text .this is a ysgw.
+
+    </p>
+    <input type="button" value="Hide text" onclick="document.getElementById('h1').style.visibility='hidden'">
+    <input type="button" value="Show text" onclick="document.getElementById('h1').style.visibility='visible'">
+</body>
+
+</html>

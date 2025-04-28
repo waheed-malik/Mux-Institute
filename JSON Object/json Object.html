@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON object</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: lightblue;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-size: large; */
+        }
+
+        h1 {
+
+            /* content: '';
+            position: absolute; */
+            /* background-color: red; */
+            width: 120px;
+            height: 80px;
+            border-bottom: 5px solid red;
+            border-left: 5px solid red;
+            margin-left: 500px;
+            bottom: 0;
+            left: 0;
+
+        }
+
+        h2 {
+            color: rgb(76, 0, 252);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JSON Object</h1>
+    <h2>Access a javascript object</h2>
+    <p id="demo"></p>
+    <script>
+        const myJSON = '{"name": "Waheed", "Age": 20,"cars":"BMW"}';
+        const myObj = JSON.parse(myJSON);
+        document.getElementById("demo").innerHTML = myObj.name;
+    </script>
+    <hr>
+    <h2>YOu ca access oject vlaues by using bracket([]) notation</h2>
+    <p id="demo1"></p>
+    <script>
+        const myJs = '{"Age":20}';
+        const myObj1 = JSON.parse(myJs);
+        document.getElementById("demo1").innerHTML = myObj1["Age"];
+    </script>
+    <hr>
+    <h2>Looping an Object</h2>
+    <p>you can loop through object prperties with a for-in loop</p>
+    <p id="demo2"></p>
+    <script>
+        const myJSO = '{"name":"Waheed", "Age":20, "Cars":"BMW"}';
+        const myObj2 = JSON.parse(myJSO);
+
+        let text = "";
+        for (const x in myObj2) {
+            text += x + ",";
+        }
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+    <hr>
+    <h1>JSON Arrays</h1>
+    <h2>Access Array Values</h2>
+    <p id="demo3"></p>
+    <script>
+        const myJs1 = '{"name":"Waheed","age":"22", "cars":["volvo","BMW","fiat"]}';
+        const myObj3 = JSON.parse(myJs1);
+        document.getElementById("demo3").innerHTML = myObj3.cars;
+    </script>
+    <hr>
+    <h2>Looping an Array</h2>
+    <h2>Looping through an array using for</h2>
+    <p id="demo4"></p>
+    <script>
+        const myJSON1 = '{"name":"Malik", "age":22,"cars":["Ford","BMW", "Fiat"]}';
+        const myObj4 = JSON.parse(myJSON1);
+
+        let txt = " ";
+        for (let i = 0; i < myObj4.cars.length; i++) {
+            txt += myObj4.cars[i] + ",";
+        }
+        document.getElementById("demo4").innerHTML = txt;
+
+    </script>
+    <hr>
+    <h2>Access nested array</h2>
+    <p>Looping through arrays inside arrays.</p>
+    <p id="demo5"></p>
+    <script>
+        let x = "";
+        const myObj5 = {
+            "name": "John",
+            "age": 30,
+            "cars": [
+                { "name": "Ford", "models": ["Fiesta", "Focus", "Mustang"] },
+                { "name": "BMW", "models": ["320", "X3", "X5"] },
+                { "name": "Fiat", "models": ["500", "panda"] }
+            ]
+        }
+        for (let i in myObj5.cars) {
+            x += "<h2>" + myObj5.cars[i].name + "</h2>";
+            for (let j in myObj5.cars[i].models) {
+                x += myObj5.cars[i].models[j] + "<br>";
+            }
+        }
+        document.getElementById("demo5").innerHTML = x;
+    </script>
+</body>
+
+</html>

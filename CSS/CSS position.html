@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <head name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>position</title>
+        <style>
+            .static {
+                position: static;
+            }
+
+            .relative {
+                position: relative;
+                left: 30px;
+                border: 3px solid #73AD21;
+            }
+
+            .fixed {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: 300px;
+                border: 3px solid red;
+            }
+
+            div.relative1 {
+                position: relative;
+                width: 600px;
+                height: 200px;
+                border: 3px solid #ff00ff;
+            }
+
+            div.absolute1 {
+                position: absolute;
+                width: 200px;
+                top: 100px;
+                right: 0;
+                border: 3px solid #73AD21;
+            }
+
+            div.sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                padding: 5px;
+                background-color: #cae8ca;
+                border: 2px solid palegreen;
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .topleft {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-size: 29px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                opacity: 0.3;
+            }
+        </style>
+
+    </head>
+
+<body>
+    <div class="static">
+        This div element has position: static;
+    </div>
+    <div class="relative">
+        This div element has position: relative;
+    </div>
+    <div class="fixed">
+        this div element has position: fixed;
+    </div>
+    <div class="relative1">
+        This div elements has position:relative:
+        <div class="absolute1">This div element has position:absolute;
+
+        </div>
+    </div><br><br>
+    <div class="sticky">
+        I am a sticky
+    </div>
+    <div style="padding-bottom: 2000px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi nisi ab quasi, reprehenderit tenetur error.
+            Ad est accusamus autem ab.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ipsa.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, excepturi ad reiciendis delectus itaque
+            quidem eaque consectetur similique, temporibus repudiandae, laudantium ullam est fugiat id laboriosam sed
+            blanditiis soluta voluptate optio totam. Debitis rem suscipit, repellat ducimus quo sapiente officia ipsum
+            obcaecati quasi impedit asperiores nemo laudantium perspiciatis, modi perferendis.</p>
+    </div>
+    <div class="container">
+        <img src="5terre.jpg" alt="Cinque Terre" width="1000" height="300">
+        <div class="topleft">
+            Top Left
+        </div>
+    </div><br>
+
+</body>
+
+</html>

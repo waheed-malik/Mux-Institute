@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* style the body */
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* header/logo title */
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+
+        /* style the navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* style the navigation bar by links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* change color on hobver */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* columnn container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* create  two unequal  column that sits next to each other */
+        /* Sidebar/ left column */
+        .side {
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* main column */
+        .main {
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* fakeimage just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        @media screen and (max-width:700px) {
+
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width:200px) {
+
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Note -->
+    <div style="background-color: yellow;padding: 5px;">
+        <h4 style="text-align: center;">Resize the browser window to see the responsive effect.</h4>
+    </div>
+    <!-- header -->
+    <div class="header">
+        <h1>My website</h1>
+        <p>With a <b>flexible</b> layout.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2>About Me</h2>
+            <h5>photo of me:</h5>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Some text about me in culpa qui officia desrunt mollit anim..</p>
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height: 60px;">Image</div><br>
+            <div class="fakeimg" style="height: 60px;">Image</div><br>
+            <div class="fakeimg" style="height: 60px;">Image</div>
+        </div>
+        <div class="main">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description ,Dec 7 , 2024</h5>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Some text</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius minus, animi, nostrum fugit perferendis in
+                harum aliquam molestiae dicta quod aut. Maxime facere quis, tenetur rem laborum consectetur earum
+                consequuntur.</p>
+            <br>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, sep 2, 2017</h5>
+            <div class="fakeimg" style="height: 200px;">Image</div>
+            <p>Some text..</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius minus, animi, nostrum fugit perferendis in
+                harum aliquam molestiae dicta quod aut. Maxime facere quis, tenetur rem laborum consectetur earum
+                consequuntur.</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <h2 class="footer">footer</h2>
+</body>
+
+</html>

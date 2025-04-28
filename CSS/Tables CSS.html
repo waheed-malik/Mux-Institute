@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table</title>
+</head>
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: rgb(200, 235, 235);
+    }
+
+    #customers tr:hover {
+        background-color: blueviolet;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #04AA6D;
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>A Fancy Table</h1>
+    <table id="customers">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>country</th>
+        </tr>
+        <tr>
+            <td>D Company</td>
+            <td>Malik</td>
+            <td>Lahore</td>
+        </tr>
+        <tr>
+            <td>D Company</td>
+            <td>Malik</td>
+            <td>Lahore</td>
+        </tr>
+        <tr>
+            <td>D Company</td>
+            <td>Malik</td>
+            <td>Lahore</td>
+        </tr>
+        <tr>
+            <td>D Company</td>
+            <td>Malik</td>
+            <td>Lahore</td>
+        </tr>
+        <tr>
+            <td>D Company</td>
+            <td>Malik</td>
+            <td>Lahore</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Statement</title>
+</head>
+<style>
+    body {
+        background-image: url(background.jpg);
+        color: aqua;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        color: chartreuse;
+    }
+</style>
+
+<body>
+
+
+
+    <h1>JavaScript Statement</h1>
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+    <p id="demo"></p>
+    <script>
+        var x, y, z;
+        x = 6;
+        y = 4;
+        z = x + y;
+        document.getElementById("demo").innerHTML = "The value of " + z + ".";
+    </script>
+
+    <h1>JavaScript Numbers</h1>
+    <p>Number can be written with or without decimals.</p>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = 123.100;
+    </script>
+
+    <h1>JavaScript Variables</h1>
+    <p>In this example, x is defined as a variable.
+        then, x is assigned the value of 6:
+    </p>
+
+    <p id="dem"></p>
+
+    <script>
+        let a;
+        a = 10;
+        document.getElementById("dem").innerHTML = a;
+    </script>
+
+    <h1>JavaScript String</h1>
+    <p>Strings can be written with double or single quotes.</p>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = 'Malik Waheed Hussain';   
+    </script>
+
+    <h1>JavaScript Operators</h1>
+    <p>JavaScript uses arithmetic operators to compute values (Just like algebra).</p>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = (10 + 9) * 10;
+    </script>
+
+    <h1>Js Expressions using constant</h1>
+    <p>Expressions compute to values. "*"</p>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo5").innerHTML = 5 * 10
+    </script>
+
+    <p>Expressions compute to values. "/"</p>
+    <p id="demo6"></p>
+    <script>
+        document.getElementById("demo6").innerHTML = 10 / 5;
+    </script>
+
+    <p>Expression compute to values. "+"</p>
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("demo7").innerHTML = 120 + 2;
+    </script>
+
+    <p>Expression compute to values. "-"</p>
+    <p id="demo8"></p>
+    <script>
+        document.getElementById("demo8").innerHTML = 100 - 38;
+    </script>
+
+    <h1>Js Expressions using String</h1>
+    <p>Expression compute to values</p>
+    <p id="demo9"></p>
+    <script>
+        document.getElementById("demo9").innerHTML = "Malik" + "" + "Waheed";
+    </script>
+
+    <h1>Js Expressions using Variables</h1>
+    <p id="demo10"></p>
+    <script>
+        var m;
+        m = 5;
+
+        document.getElementById("demo10").innerHTML = m * 10;
+    </script>
+</body>
+
+</html>

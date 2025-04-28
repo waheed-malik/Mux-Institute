@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Maths</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: cyan;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: rgb(255, 64, 0);
+        }
+
+        h2 {
+            color: rgb(242, 110, 110);
+        }
+
+        img {
+            /* padding-left: 40%; */
+            width: 20%;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo1.png" alt="">
+    <h1>JavaScript Math</h1>
+    <h2> javaScript Math.PI</h2>
+    <p>Math.PI return the ratio of a circle's circumstances to its diameter:</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = Math.PI;
+    </script>
+    <hr>
+    <h2>javaScript Math.round()</h2>
+    <p>Math.round(x) returns of x rounded to its x roundes to its nearest intger:4.5</p>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = Math.round(4.5);
+    </script>
+    <hr>
+    <h2>javaScript Math.pow</h2>
+    <p>Math.pow(x,y) returns the value of x to the power of y: (8,2)</p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo2").innerHTML = Math.pow(8, 2);
+    </script>
+    <hr>
+    <h2>javaScript Math.sqrt(64)</h2>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = Math.sqrt(64);
+    </script>
+    <hr>
+    <h2>javaScript Math.abs()</h2>
+    <p>Math.abs(x) returns the absolute (positive) value of x:</p>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = Math.abs(-4.7);
+    </script>
+    <hr>
+    <h2>javaScript Math.ceil()</h2>
+    <p>Math.ceil(4.4) rounds a number <strong>up</strong> to its nearest integer:</p>
+    <p id="demo5"></p>
+    <script>
+        document.getElementById("demo5").innerHTML = Math.ceil(4.4);
+    </script>
+    <hr>
+    <h2>javaScript Math.floor:</h2>
+    <p>Math.floor(x) returns the value of x rounded <strong>Down</strong>to its nearest integer:4.7</p>
+    <p id="demo6"></p>
+    <script>
+        document.getElementById("demo6").innerHTML = Math.floor(4.7);
+    </script>
+    <hr>
+    <h2>javaScript Math.sin()</h2>
+    <p>MAth.sin(x) returns the sin of x ( given in radius):</p>
+    <p>Angle in radians = (angle in degrees) * PI / 180.</p>
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("demo7").innerHTML = " The sine value of 90 deg is " + Math.sin(90 * Math.PI / 180);
+    </script>
+    <hr>
+    <h2>javaScript Math.cos()</h2>
+    <p>MAth.sin(x) returns the cosine of x ( given in radius):</p>
+    <p>Angle in radians = (angle in degrees) * PI / 180.</p>
+    <p id="demo8"></p>
+    <script>
+        document.getElementById("demo8").innerHTML = " The cosine value of 0 deg is " + Math.cos(0 * Math.PI / 180);
+    </script>
+    <hr>
+    <h2>javaScript Math.max()</h2>
+    <p>Math.max() returns the highest value in a list of arguments.</p>
+    <p id="demo9"></p>
+    <script>
+        document.getElementById("demo9").innerHTML = Math.max(0, 150, 30, 20, -8, -200)
+    </script>
+    <hr>
+    <h2>javaScript <Math class="min"></Math>()</h2>
+    <p>Math.min() returns the lowest value in a list of arguments.</p>
+    <p id="demo10"></p>
+    <script>
+        document.getElementById("demo10").innerHTML = Math.min(0, 150, 30, 20, -8, -200)
+    </script>
+    <hr>
+    <h2>javaScript Celcius to Fahrenhet</h2>
+    <p>Insert a Number into one of the input fields below:</p>
+    <p><input id="c" onkeyup="convert('C')"> degree Celsius</p>
+    <p><input id="f" onkeyup="convert('F')"> degree Fahrenheit</p>
+    <p>Note that the <b> Math.round()</b> method is used, so that the result will be returned as an integer.</p>
+    <script>
+        function convert(degree) {
+            var x;
+            if (degree == "C") {
+                x = document.getElementById("c").value * 9 / 5 + 32;
+                document.getElementById("f").value = Math.round(x);
+            } else {
+                x = (document.getElementById("f").value - 32) * 5 / 9;
+                document.getElementById("c").value = Math.round(x);
+            }
+        }
+    </script>
+</body>
+
+</html>

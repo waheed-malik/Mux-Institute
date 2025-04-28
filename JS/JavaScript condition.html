@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: xx-large;
+
+        }
+
+        h1 {
+            color: lawngreen;
+        }
+
+        h2 {
+            color: aquamarine;
+        }
+
+        h3 {
+            color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Condition</h1>
+    <h2>JavaScript if</h2>
+    <p>Display "Good day!" if the hour is less than 18:00</p>
+    <p id="demo">Good morning</p>
+    <script>
+        if (new Date().getHours() < 20) {
+            document.getElementById("demo").innerHTML = "Good day!";
+        }
+    </script>
+    <hr>
+    <h2>JavaScript if..else</h2>
+    <p>A time-based greeting</p>
+
+    <p id="demo1"></p>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 18) {
+            greeting = "Good Day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.getElementById("demo1").innerHTML = greeting;
+    </script>
+    <hr>
+    <p id="demo3"></p>
+    <script>
+        const time = new Date().getHours();
+        let greetings;
+        if (time < 10) {
+            greetings = "Good Morning";
+        } else if (time < 18) {
+            greetings = "Good day";
+        } else {
+            greetings = "Good evening";
+        }
+        document.getElementById("demo3").innerHTML = greetings;
+    </script>
+    <hr>
+    <h2>JavaScript Switch</h2>
+    <p>Display A Day using switch statement or condition</p>
+    <p id="demo4"></p>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        document.getElementById("demo4").innerHTML = day;
+    </script>
+    <hr>
+    <h1>JavaScript Loops</h1>
+    <p>Loops are handy if you want to run the same code over and over again, each time with a different value.</p>
+    <p id="demo5"></p>
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = text;
+    </script>
+    <hr>
+    <p id="demo6"></p>
+    <script>
+        let lp = "";
+        for (let i = 0; i < 5; i++) {
+            lp += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo6").innerHTML = lp;
+    </script>
+    <hr>
+    <h2>Loop scope</h2>
+    <h3>JavaScript var</h3>
+    <h3>Using var in loop, the output is 10, but with let, the output is 5:</h3>
+    <p id="demo7"></p>
+    <script>
+        var i = 5;
+        for (var i = 0; i < 10; i++) {
+            // Some statements
+        }
+        document.getElementById("demo7").innerHTML = i;
+    </script>
+    <hr>
+    <h2>Using let</h2>
+    <p id="demo8"></p>
+    <script>
+        let i = 5;
+        for (let i = 0; i < 10; i++) {
+            // Some statements
+        }
+        document.getElementById("demo8").innerHTML = i;
+    </script>
+    <hr>
+    <h2>JavaScript For IN Loop</h2>
+    <p>The for-in statement loops through the properties of an object:</p>
+    <p id="demo9"></p>
+    <script>
+        const man = { fname: "Malik", lname: "Waheed", age: 20 };
+        let txt = "";
+        for (let x in man) {
+            txt += man[x] + " ";
+        }
+        document.getElementById("demo9").innerHTML = txt;
+    </script>
+    <hr>
+    <p>Loop from 1 to 6, to make HTML headings:</p>
+    <p id="dem"></p>
+    <script>
+        let y = "";
+        for (let i = 1; i <= 6; i++) {
+            y += "<h" + i + ">Heading " + i + "</h" + i + ">";
+        }
+        document.getElementById("dem").innerHTML = y;
+    </script>
+    <hr>
+    <h2>JavaScript While Loop</h2>
+    <p id="demo10"></p>
+    <script>
+        let tex = "";
+        let i = 0;
+        while (i < 10) {
+            tex += "<br> The number is" + i;
+            i++;
+        }
+        document.getElementById("demo10").innerHTML = tex;
+    </script>
+    <hr>
+    <h2>JavaScript Error Handling</h2>
+    <p>How to use <b>Catch</b> to Display an error.</p>
+    <p id="error"></p>
+    <script>
+        try {
+            adddlert("Welcome Guest!");
+        } catch (err) {
+            document.getElementById("error").innerHTML = err.message;
+        }
+    </script>
+    <hr>
+    <h2>The try...catch statement with a confirm box</h2>
+    <p id="demoo"></p>
+    <script>
+        var txtt = " ";
+        function message() {
+            try {
+                adddlert("Welcome guest!");
+            }
+            catch (err) {
+                txtt = "There was an error on this page.\n\n";
+                txtt += "Click Ok to cotiue viewig this page,\n";
+                txtt += "Or Cancel to return to the home page.\n\n";
+                if (!confirm(txtt)) {
+                    document.location.href = "https://www.w3schools.com/";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

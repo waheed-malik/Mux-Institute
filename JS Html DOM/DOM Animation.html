@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: rgb(49, 4, 246);
+        }
+    </style>
+
+<body>
+    <h1>My First JavaScript Animation</h1>
+    <p><button onclick="myMove()">Click Me</button></p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

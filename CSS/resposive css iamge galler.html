@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <head name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>res css image Gallery</title>
+        <style>
+            .gallery {
+                border: 1px solid #ccc;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            .dec {
+                padding: 15px;
+                text-align: center;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .responsive {
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
+            }
+
+            @media only screen and(max-width: 700px) {
+                .responsive {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                .responsive {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+    <h2>Responsive Image Gallery</h2>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="5terre.jpg">
+                <img src="5terre.jpg" alt="5terre.jpg" width="600" height="400">
+            </a>
+            <div class="desc">
+                add a discription of the image here
+            </div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="5terre.jpg">
+                <img src="5terre.jpg" alt="5terre.jpg" width="600" height="400">
+            </a>
+            <div class="desc">
+                add a discription of the image here
+            </div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="5terre.jpg">
+                <img src="5terre.jpg" alt="5terre.jpg" width="600" height="400">
+            </a>
+            <div class="desc">
+                add a discription of the image here
+            </div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="5terre.jpg">
+                <img src="5terre.jpg" alt="5terre.jpg" width="600" height="400">
+            </a>
+            <div class="desc">
+                add a discription of the image here
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

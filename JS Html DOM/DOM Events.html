@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        #myDIV {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+            color: white;
+            font-size: 20px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+    <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+    <hr>
+    <h2>The oninput Attribute</h2>
+    Enter your name: <input type="text" id="fname" oninput="upperCase()">
+    <p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+    <script>
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+    <hr>
+    <h2>The onmouseover Attribute</h2>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color: aqua;width: 200px;height: 40px;padding: 40px;">Mouse Over Me</div>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over ME"
+        }
+    </script>
+    <hr>
+    <h2>JavaScript addEventLister()</h2>
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+    <button id="myBtn">Try it</button>
+    <script>document.getElementById("myBtn").addEventListener("click", function () {
+            alert("Hello World!");
+        })</script>
+    <hr>
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+    <button id="myBt">Try it</button>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("myBt").addEventListener("click", displayDate);
+        function displayDate() {
+            document.getElementById("demo1").innerHTML = Date();
+        }
+    </script>
+    <hr>
+    <p>This example uses the addEventListener() method to add two click events to the same button.</p>
+    <button id="btn1">Try it</button>
+    <script>
+        var x = document.getElementById("btn1");
+        x.addEventListener("click", function () {
+            alert("Hello Malik")
+        });
+        x.addEventListener("click", someOtherFunction);
+        function someOtherFunction() {
+            alert("G malik Shb.")
+        }
+    </script>
+    <hr>
+    <button id="btn2">Try it ! </button>
+    <script>
+        var x = document.getElementById("btn2");
+        x.addEventListener("click", function1);
+        function function1() {
+            alert("Hello Everyone");
+        }
+        x.addEventListener("click", function2);
+        function function2() {
+            alert("One time again Click at Ok!");
+        }
+        x.addEventListener("click", function () {
+            alert("Like and comment ");
+        });
+    </script>
+    <hr>
+    <p>This example uses the addEventListener() method to add events on the same button.</p>
+    <button id="btn4">Click ME!</button>
+    <p id="demo4"></p>
+    <script>
+        var x = document.getElementById("btn4");
+        x.addEventListener("mouseover", function3);
+        x.addEventListener("click", function4);
+        x.addEventListener("mouseout", function5);
+        function function3() {
+            document.getElementById("demo4").innerHTML += "Moused over!<br>";
+
+        }
+
+        function function4() {
+            document.getElementById("demo4").innerHTML += "Clicked!<br>";
+
+        }
+        function function5() {
+            documnet.getElementById("demo4").innerHTML += "Moused Out!<br>";
+        }
+    </script>
+    <hr>
+
+    <p>This exampleuses the addEventListener() method on the window object.</p>
+    <p>Try resizing this browser window to trigger the "resize" event handler.</p>
+    <p id="demo5"></p>
+    <script>
+        window.addEventListener("resize", function1);
+        function function1() {
+            document.getElementById("demo5").innerHTML = Math.random();
+
+        }
+    </script>
+    <hr>
+    <p>This Example demonstrates how to pass parameter values whenusing the addEventListener() method.</p>
+    <p>Click the button to perform a calculation</p>
+    <button id="btn7">Try it!</button>
+    <p id="demo7"></p>
+    <script>
+        let p1 = 5;
+        let p2 = 17;
+        document.getElementById("btn7").addEventListener("click", function () {
+            myFunction11(p1, p2);
+        });
+        function myFunction11(a, b) {
+            document.getElementById("demo7").innerHTML = a * b;
+        }
+    </script>
+    <hr>
+    <h2>JavaScript removeEventListener()</h2>
+
+    <div id="myDIV">
+        <p>This div element has an onmousemove event handler that displays a random number every time you move your
+            mouse inside this orange field.</p>
+        <p>Click the button to remove the div's event handler.</p>
+        <button onclick="removeHandler()" id="myBtn">Remove</button>
+    </div>
+
+    <p id="demo9"></p>
+
+    <script>
+        document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+
+        function myFunction() {
+            document.getElementById("demo9").innerHTML = Math.random();
+        }
+
+        function removeHandler() {
+            document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+        }
+    </script>
+
+    <hr>
+    <p>Hello World!</p>
+    <p>Hello Norway!</p>
+    <p>hello rolahy</p>
+    <p>Click the button To change the color of all p elements.</p>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            const myCollection = document.getElementsByTagName("p");
+            for (let i = 0; i < myCollection.length; i++) {
+                myCollection[i].style.color = "blue";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD Media Queries</title>
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            body {
+                background-color: rgb(236, 96, 189);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>Resize the browser window when the width of this documnet is 600px or less , the background-color is "lightblue",
+        otherwise it is "lightgreen"</p>
+</body>
+
+</html>

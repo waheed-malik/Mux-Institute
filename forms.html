@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head name="viewport" content="width=width-divce, initial-scale= 1.0">
+        <title>HTML Form 1</title>
+    </head>
+
+<body>
+    <h2>HTML Forms</h2>
+    <form action="/>action_page.php">
+        <label for="fname">First name</label>
+        <br>
+        <input type="text" id="fname" value="Malik">
+        <br>
+        <label for="lname">Last name</label>
+
+        <br>
+        <input type="text" id="lname" value="waheed">
+        <br>
+        <br>
+        <input type="Submit" value="Submit">
+    </form>
+    <!-- radio -->
+    <br>
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="CSS" name="fav_language" value="CSS">
+        <label for="CSS">CSS</label><br>
+        <input type="radio" id="JS" name="fav_language" value="Js">
+        <label for="JS">JS</label>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <br>
+    <br>
+    <!-- Checkbox -->
+    <form action="/action_page.php" method="get">
+        <input type="checkbox" id="Vehicle1" name="Vehicle1" value="Car">
+        <label for="Vehicle1">I have a Car</label><br>
+        <input type="checkbox" id="Vehicle2" name="Vehicle2" value="Bike">
+        <label for="Vehicle2">I Have a Bike</label><br>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <br>
+    <br>
+    <!-- Select element -->
+    <form action="/action_page.php">
+        <label for="Cars">Choose a car:</label>
+        <select id="cars" name="cars">
+            <option value="Volvo">Volvo</option>
+            <option value="BMW">BMW</option>
+            <option value="MarCd">Marcd</option>
+
+        </select><br><br>
+        <input type="Submit">
+    </form>
+    <br>
+    <br>
+    <!-- Textarea -->
+    <form action="">
+        <textarea name="massage" rows="10"
+            cols="30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nisi optio minima tenetur. Nulla eos mollitia debitis dicta dolores repellat.</textarea>
+        <br>
+        <br>
+        <input type="Submit">
+    </form>
+    <br>
+    <br>
+    <button type="button" onclick="alert('Hello Malik')">Click Me!</button>
+    <br>
+    <br>
+    <!--fieldset, legend -->
+    <form action="">
+        <fieldset>
+            <legend>Person</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <!-- output element  -->
+    <h1>Output element</h1>
+    <form action="/>action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output> <br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

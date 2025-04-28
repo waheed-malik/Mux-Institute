@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h charset="utf-8">
+        <title>Video</title>
+        <meta name="viewport" content="width=width-device,initial-scale=0.1">
+</head>
+
+<body>
+
+
+    <div style="text-align: center;">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="video" width="420">
+            <source src="audio.mp4" type="video/mp4">
+
+        </video>
+    </div>
+    <script>
+        var myVideo = document.getElementById("video");
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+        function makeBig() {
+            myVideo.width = 560;
+        }
+        function makeSmall() {
+            myVideo.width = 320;
+        }
+        function makeNormal() {
+            myVideo.width = 420;
+        }
+    </script>
+    <p>Video courtesy of<a href="https://youtu.be/g2BGX1jcMXE?si=Ze6o2_9xSCEWOwvC">video</a></p>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/g2BGX1jcMXE?si=Ul967qXh-Lf56bWN"></iframe>
+</body>
+
+</html>

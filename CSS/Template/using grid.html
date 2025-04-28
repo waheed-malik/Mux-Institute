@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'left left middle middle right right'
+                'footer footer footer footer footer footer';
+            gap: 10px;
+        }
+
+        .left,
+        .middle,
+        .right {
+            padding: 10px;
+            height: 300px;
+        }
+
+        .left {
+            grid-area: left;
+            background-color: #aaa;
+        }
+
+        .middle {
+            grid-area: middle;
+            background-color: #bbb;
+        }
+
+        .right {
+            grid-area: right;
+            background-color: #ccc;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h2>Header</h2>
+        </div>
+
+        <div class="left">Left Column</div>
+        <div class="middle">Middle Column</div>
+        <div class="right">Right Column</div>
+
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation Example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            /* Prevents horizontal scrollbar */
+            background-color: #f0f0f0;
+            /* Light background for better visibility */
+        }
+
+        .text {
+            font-size: 24px;
+            color: #333;
+            white-space: nowrap;
+            /* Prevents text from wrapping */
+            position: absolute;
+            /* top: 50%;
+            left: 20%; */
+            /* Start position off the screen */
+            transform: translateY(-50%);
+            animation: moveLeftToRight 10s linear infinite;
+            /* Adjust duration as needed */
+        }
+
+        @keyframes moveLeftToRight {
+            from {
+                transform: translateX(-100%) translateY(-50%);
+            }
+
+            to {
+                transform: translateX(100vw) translateY(-50%);
+                /* Move text to the right edge */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        Watch me move left to right continuously!
+    </div>
+</body>
+
+</html>

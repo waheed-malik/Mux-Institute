@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            background-color: cadetblue;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+
+        function validateNumber() {
+            let x = document.getElementById("numb").value;
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+            } else {
+                text = "Input Ok";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        function validatePassword() {
+            let x = document.getElementById("pass").value;
+            let password;
+            let Password = (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/);
+            if (Password.test(x)) {
+                password = "Password is strong"
+            }
+            else {
+                password = "Password must be at least 8 character long, include a mix of uppercase, lowercase letters, a number, and a special character.";
+            }
+            document.getElementById("demo1").innerHTML = password;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Validation name -->
+    <h2>JavaScript validation</h2>
+    <h3>If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from
+        being submitted:</h3>
+    <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <!-- Validate Number -->
+
+    <p>Please input a number between 1 and 10:</p>
+    <input id="numb">
+    <button type="button" onclick="validateNumber()">Submit</button>
+    <p id="demo"></p>
+    <hr>
+
+    <!-- Validate password -->
+    <h3>The password validation now properly uses the .test() method on the regular expression to check the password.
+        The condition checks whether the password is strong, and displays an appropriate message accordingly.</h3>
+    <p>Please input a password </p>
+    <input id="pass">
+    <button type="button" onclick="validatePassword()">Submit</button>
+    <p id="demo1"></p>
+</body>
+
+</html>

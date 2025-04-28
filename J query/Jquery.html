@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h2>Finding HTML Elements by id</h2>
+    <p id="id01">hello World!</p>
+    <p id="id02">Hello Sweden!</p>
+    <p id="id03">Hello Japan!</p>
+    <p id="demo"></p>
+    <script>
+        $(document).ready(function () {
+            var myElements = $("#id01");
+            $("#demo").text("The text from the id01 paragraph is: " +
+                myElements[0].innerHTML
+            );
+        });
+    </script>
+    <hr>
+    <h2>Finding HTML elements by Tag Name</h2>
+    <p>Hello Multan!</p>
+    <p>Hello Lahore</p>
+    <p>Hello nnaaa</p>
+    <p id="demo1"></p>
+    <script>
+        $(document).ready(function () {
+            var myElement = $("p");
+            $("#demo1").text("The text in the first paragraph is: " +
+                myElement[5].innerHTML
+            );
+        });
+    </script>
+    <hr>
+    <h2>Setting Text Content</h2>
+    <p id="01">Hello World!</p>
+    <p id="02">Hello Karachi!</p>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#01");
+            myElement.text("Hello Karachi!");
+        });
+    </script>
+</body>
+
+</html>

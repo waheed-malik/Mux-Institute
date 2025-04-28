@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        h1 {
+            text-decoration: double underline;
+            color: chartreuse;
+        }
+
+        h2 {
+            text-decoration: underline;
+            color: rgb(165, 246, 85);
+        }
+
+        p {
+            color: rgba(0, 246, 246, 0.934);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Properties</h1>
+    <h2>The constructor property</h2>
+    <p>The constructor property returns the constructor function for a variable or an object.</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML =
+            "john".constructor + "<br>" +
+            (3.14).constructor + "<br>" +
+            false.constructor + "<br>" +
+            12345n.constructor + "<br>" +
+            {}.constructor + "<br>" +
+            [].constructor + "<br>" +
+            new Date().constructor + "<br>" +
+            new Map().constructor + "<br>" +
+            new Set().constructor + "<br>" +
+            function () { }.constructor;
+    </script>
+    <hr>
+    <h2>The JavaScript String() Method</h2>
+    <p>The String() method can convert a number to a string . String(x) + "<br>" +
+        String(123) + "<br>" +
+        String(100 + 23);</p>
+    <p id="demo1"></p>
+    <script>
+        let x = 123;
+        document.getElementById("demo1").innerHTML =
+            String(x) + "<br>" +
+            String(123) + "<br>" +
+            String(100 + 23);
+    </script>
+    <hr>
+    <p>The String() method can convert a number to a string .y.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();</p>
+    <p id="demo3"></p>
+    <script>
+        let y = 123;
+        document.getElementById("demo3").innerHTML =
+            y.toString() + "<br>" +
+            (123).toString() + "<br>" +
+            (100 + 23).toString();
+    </script>
+    <hr>
+    <p>This "home made" isArray() function return true when used on an array:</p>
+    <p id="demo4"></p>
+    <Script>
+        const fruits = ["Banana",
+            "Orange", "Apple"
+        ];
+        document.getElementById("demo4").innerHTML = (fruits);
+
+        function isArray(myArray) {
+            return
+            myArray.constructor.toString().indexOf("Array") > -1;
+        }
+    </Script>
+</body>
+
+</html>

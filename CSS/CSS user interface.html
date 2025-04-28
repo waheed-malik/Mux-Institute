@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css interface</title>
+    <style>
+        .horizontal {
+            border: 2px solid;
+            padding: 20px;
+            width: 300px;
+            resize: horizontal;
+            overflow: auto;
+        }
+
+        .vertical {
+            border: 2px solid;
+            padding: 20px;
+            width: 300px;
+            resize: vertical;
+            overflow: auto;
+        }
+
+        .both {
+            border: 2px solid;
+            padding: 20px;
+            width: 300px;
+            resize: both;
+            overflow: auto;
+
+        }
+
+        textarea#test {
+            resize: none;
+        }
+
+        div.ex1 {
+            margin: 20px;
+            border: 1px solid black;
+            outline: 4px solid red;
+            outline-offset: 15px;
+        }
+
+        div.ex2 {
+            margin: 10px;
+            border: 1px solid black;
+            outline: 5px solid blue;
+            outline-offset: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The resize property</h1>
+    <div class="horizontal">
+        <p>Let the user resize only the width of this div elments.</p>
+        <p>To resize: Click and drag the bottom right corner of this div elements.</p>
+    </div><br><br>
+    <div class="vertical">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorem minus sit dolores sunt perferendis
+            .</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quaerat, obcaecati dolore rem cumque pariatur
+            incidunt reprehenderit molestias laboriosam repellat.</p>
+    </div>
+    <br><br>
+    <div class="both">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, dolor. Obcaecati, exercitationem?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, quidem, quod numquam accusantium eum
+            atque assumenda dolor totam nisi incidunt exercitationem ex velit eius, consequuntur at sunt cumque
+            provident maiores.</p>
+    </div>
+    <br>
+    <textarea id="test">Textarea - Not resizedable</textarea>
+    <br><br>
+    <textarea>Textarea - resize able(default)</textarea>
+    <br><br>
+    <h1>The outline-offset property</h1>
+    <div class="ex1"> This div has a 4 pixels solid red outline 15 pixels outside the border edge.</div>
+    <br>
+    <div class="ex2">This div has a 5 pixels dashed blue outline 5 pixels outside the border edge.</div>
+</body>
+
+</html>

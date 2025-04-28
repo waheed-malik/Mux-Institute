@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <head name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Website Layout</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .Header {
+                background-color: cadetblue;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .topnav {
+                background-color: #333;
+                overflow: hidden;
+            }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+            }
+
+            /* Create three equal columns that floats next to each other */
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 15px;
+                /* border: 1px solid black; */
+            }
+
+            /* clear floats after the columns */
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .footer {
+                background-color: #e9c9c9;
+                padding: 20px;
+                text-align: center;
+            }
+
+            /* responsive */
+            @media screen and(max-width:600px) {
+                .column {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="Header">
+        Header
+    </div>
+
+    <div class="topnav">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident omnis corporis obcaecati quis
+                commodi consectetur odit necessitatibus fugiat rerum, praesentium sequi suscipit quos placeat atque quo,
+                perspiciatis explicabo eligendi sunt veniam, vel labore! Sunt sed ea quas nesciunt eum magni magnam
+                autem temporibus excepturi sapiente eius eaque </p>
+        </div>
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident omnis corporis obcaecati quis
+                commodi consectetur odit necessitatibus fugiat rerum, praesentium sequi suscipit quos placeat atque quo,
+                perspiciatis explicabo eligendi sunt veniam, vel labore! Sunt sed ea quas nesciunt eum magni magnam
+                autem temporibus excepturi sapiente eius eaque </p>
+        </div>
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident omnis corporis obcaecati quis
+                commodi consectetur odit necessitatibus fugiat rerum, praesentium sequi suscipit quos placeat atque quo,
+                perspiciatis explicabo eligendi sunt veniam, vel labore! Sunt sed ea quas nesciunt eum magni magnam
+                autem temporibus excepturi sapiente eius eaque </p>
+        </div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+</body>
+
+</html>

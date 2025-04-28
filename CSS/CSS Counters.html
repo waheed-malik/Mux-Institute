@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters</title>
+    <style>
+        body {
+            counter-reset: section;
+        }
+
+
+
+        h2::before {
+            counter-increment: section;
+            content: "section " counter(section)": ";
+        }
+
+        h1 {
+            counter-reset: subsection;
+        }
+
+        h1::before {
+            counter-increment: section;
+            content: "section" counter(section)":";
+        }
+
+        h3::before {
+            counter-increment: subsection;
+            content: counter(section) "." counter(subsection)"";
+        }
+
+        /* list */
+
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+
+        li::before {
+            counter-increment: section;
+            content: counters(section, ".")" ";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Using CSS counters</h1>
+
+    <h2>HTML Tutorial</h2>
+    <h2>CSS tutorial
+    </h2>
+    <h2>Js Tutorial</h2>
+    <h2>Python Tutorial</h2>
+    <h2>SQL Tutorail</h2>
+
+    <h1>HTML/CSS Tutorials</h1>
+    <h3>HTML</h3>
+    <h3>CSS</h3>
+    <h3>Bootstrap</h3>
+    <h3>W3.CSS
+    </h3>
+
+    <h1>Scripting Tutorials</h1>
+    <h3>JavaScript</h3>
+    <h3>JQuery</h3>
+    <h3>React</h3>
+
+    <h1>Programming language</h1>
+    <h3>Python</h3>
+    <h3>php</h3>
+    <h3>java</h3>
+    <!-- list -->
+    <br><br>
+    <h1>List items</h1>
+    <ol>
+        <li>item</li>
+        <li>item
+
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item
+
+                    <ol>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item</li>
+                    </ol>
+
+                </li>
+                <li>item</li>
+            </ol>
+        </li>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+    <ol>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+</body>
+
+</html>

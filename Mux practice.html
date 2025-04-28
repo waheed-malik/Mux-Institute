@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head charset="utf-8">
+        <title>CSS Template</title>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* body { */
+        /* font-family: 'Courier New', */
+        /* Courier, */
+        /* monospace; */
+
+        /* } */
+
+        header {
+            background-color: #5dd5f3;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            /* height: 30px; */
+            background: #e560ea;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: azure;
+
+        }
+
+        sction::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #ca4ced;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        @media(max-width:600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+<body>
+    <img src="d:\Mux\Malik.jpg">
+    <h2>CSS Layout Float</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fuga delectus facilis nisi architecto cumque,
+        possimus recusandae quas laboriosam, saepe quaerat molestias voluptas, deserunt exercitationem eos quo repellat
+        earum. Ut culpa nobis omnis adipisci. Quibusdam necessitatibus quis quia! Dolores reiciendis corporis possimus,
+        non assumenda eos! Aliquid quasi perferendis natus est?</p>
+    <header>
+        <h2>Cities</h2>
+    </header>
+    <section>
+        <nav>
+            <a>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Multan</a></li>
+                <li><a href="#">Lahore</a></li>
+            </a>
+        </nav>
+        <article>
+            <h1>London</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non magni natus corrupti, totam assumenda quis
+                cupiditate reprehenderit tenetur quos nostrum.</p>
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</html>

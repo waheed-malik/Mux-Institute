@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            text-align: center;
+            font-weight: bold;
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            background-color: blue;
+            color: chartreuse;
+        }
+
+        input {
+            background-color: chartreuse;
+        }
+
+        h1 {
+            color: deeppink;
+        }
+
+        h2 {
+            color: fuchsia;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Function</h1>
+    <p>when you click "Try it", a function will be called .</p>
+    <p>The function will display a message.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hi Malik!";
+        }
+    </script>
+    <hr>
+    <p>Click "Try it" to call afunction with arguments</p>
+    <button onclick="myFunction1 ('Malik  Waheed','Pakistan')">Try it</button>
+    <p id="demo1"></p>
+    <script>
+        function myFunction1(name, city) {
+            document.getElementById("demo1").innerHTML = " Welcome " + name + ", from " + city + ".";
+
+        }
+
+    </script>
+    <hr>
+    <p>When you click on one of the buttons , a function will be called.The
+        funtion will display the argument that is passed to it.
+    </p>
+    <form>
+        <input type="button" onclick="myfunction('Good Morning!')" value="In the Morning"
+            style="background-color: aqua;">
+        <input type="button" onclick="myfunction('Good Evening!')" value="In the Evening">
+    </form>
+    <p id="demo3"></p>
+    <script>
+        function myfunction(txt) {
+            document.getElementById("demo3").innerHTML = txt
+        }
+    </script>
+    <hr>
+    <p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p>
+    <p id="demo4"></p>
+    <script>
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+        let value = toCelsius(77);
+        document.getElementById("demo4").innerHTML = value;
+    </script>
+    <hr>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+    <button onclick="document.getElementById('demo5').innerHTML=Date()">The time is?</button>
+    <p id="demo5"></p>
+    <hr>
+    <h3>An onclick event Changes its own elements</h3>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <hr>
+    <h1>JavaScript String</h1>
+    <p>String are written inside quotes.</p>
+    <p>You can use single or double quotes:</p>
+    <p id="demo6"></p>
+    <script>
+        var carName1 = "Volvo XC60";
+        var carName2 = 'Volvo XC60';
+        document.getElementById("demo6").innerHTML =
+            carName1 + " " + carName2;
+    </script>
+    <hr>
+    <p>You can use quotes inside a string , as long as they dont match the quotes surrounding the string:</p>
+    <p id="demo7"></p>
+    <script>
+        let answer1 = "It is Alright";
+        let answer2 = "He is called 'Malik'";
+        let answer3 = 'He is called "Waheed"';
+        document.getElementById("demo7").innerHTML =
+            answer1 + "<br>" +
+            answer2 + "<br>" +
+            answer3;
+    </script>
+    <hr>
+    <h2>The indexOf() Method</h2>
+    <p>The indexOf() method return the position of the first occurrence of a string in a string.</p>
+    <p>The position of thr first occurrence of " Locate" is:</p>
+    <p>Please locate where 'locate' occurs!</p>
+    <p id="demo8"></p>
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+        let index = text.indexOf("locate");
+        document.getElementById("demo8").innerHTML = index;
+    </script>
+    <hr>
+    <p>Click button to perform a global (/g) search for the letters "in"(/in) in a string , and display the matches.</p>
+    <p>The Rain in SPAIN stayes mainly in the plain</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo9"></p>
+    <script>
+        function myFunction() {
+            var str = "The Rain in SPAIN stayes mainly in the plain";
+            var res = str.match(/in/g);
+            document.getElementById("demo9").innerHTML = res;
+        }
+    </script>
+</body>
+
+</html>
